@@ -33,7 +33,7 @@ jobs:
           MAPS_API_KEY: ${{ secrets.MAPS_API_KEY }}
         run: |
           touch assets/.env
-          echo API_KEY="$MAPS_API_KEY" >> assets/.env
+          echo API_KEY=$MAPS_API_KEY >> assets/.env
         shell: bash
       - name: Setup Pages
         uses: actions/configure-pages@v3
